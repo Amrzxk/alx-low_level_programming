@@ -18,7 +18,7 @@ int numLength(int num)
 	while (num)
 	{
 		num = num / 10;
-		lengh += 1;
+		length += 1;
 	}
 
 	return (length);
@@ -43,7 +43,7 @@ int main(void)
 			printf("%lu", f1o);
 		intialzeros = numLength(mx) - 1 - numLength(f1);
 
-		while (f10 > 0 && intialzeros > 0)
+		while (f1o > 0 && intialzeros > 0)
 		{
 			printf("%d", 0);
 			intialzeros--;
