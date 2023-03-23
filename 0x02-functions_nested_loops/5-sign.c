@@ -7,6 +7,7 @@
  *
  * Return: 1 if +, 0 if 0, and -1 if -.
 */
+
 int print_sign(int n)
 {
 	if (n > 0)
@@ -24,4 +25,5 @@ int print_sign(int n)
 		_putchar(45);
 		return (-1);
 	}
+
 }
