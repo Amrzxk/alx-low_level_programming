@@ -17,7 +17,7 @@ double _sqrt(double x)
 
 	while (sqrt != tmp)
 	{
-		temp = sqrt;
+		tmp = sqrt;
 		sqrt = (x / tmp + tmp) / 2;
 	}
 	return (sqrt);
