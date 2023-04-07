@@ -10,7 +10,7 @@
 
 char *move_past_star(char *s2)
 {
-	if (*s == '*')
+	if (*s2 == '*')
 		return (move_past_star(s2 + 1));
 	else
 		return (s2);
