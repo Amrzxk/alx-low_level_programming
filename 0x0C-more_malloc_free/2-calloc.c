@@ -1,47 +1,23 @@
 #include "main.h"
-/**
- * _memset - function that sets a block of memory to a specific value
- *
- * @s: pointer to constant
- * @c: represents the value to be set
- * @n: maximum bytes to use
- *
- * Return: Pointer
-*/
-
-void *_memset(char *s, char c, unsigned int n)
-{
-	char *p = s
-
-	while (n--)
-	{
-		*s++ = c;
-	}
-	return (p);
-}
 
 /**
- * _calloc - allocates memory for an array
+ * _calloc - allocates memory for an array, initialized to 0
+ * @nmemb: number of elements
+ * @size: byte size of each element
  *
- * @nmemb: array length
- * @size: size of elements
- *
- * Return: Pointer
-*/
-
+ * Return: void pointer to array space
+ */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *p
+	char *p;
 
-	if (size == 0 || nmemb == 0)
+	if (!nmemb || !size)
 		return (NULL);
-
-	p = malloc(sizeof(int) * nmemb);
-
-	if (p == NULL)
+	p = malloc(nmemb * size);
+	if (!p)
 		return (NULL);
-
-	_memset(p, 0, sizeof(int) * nmemb);
-
+	nmemb *= size;
+	while (nmemb--)
+		p[nmemb] = 0;
 	return (p);
 }
