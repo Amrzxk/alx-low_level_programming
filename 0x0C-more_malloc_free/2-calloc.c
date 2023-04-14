@@ -9,7 +9,7 @@
  * Return: Pointer
 */
 
-void *_memset(void *s, int c, unsigned int n)
+void *_memset(char *s, int c, unsigned int n)
 {
 	char *p = s
 
