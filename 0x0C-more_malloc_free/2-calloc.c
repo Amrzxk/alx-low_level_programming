@@ -11,13 +11,13 @@
 
 void *_memset(void *s, int c, unsigned int n)
 {
-	unsigned char *p = s;
-	unsigned char uc = (unsigned char) c;
+	char *p = s
 
 	while (n--)
-	*p++ = uc;
-
-	return (s);
+	{
+		*s++ = b;
+	}
+	return (p);
 }
 
 /**
