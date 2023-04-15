@@ -16,17 +16,12 @@ int main(int argc, char **argv)
 	char *p;
 
 	add = 0;
-	
-	while (argc--)
+
+	while (--argc)
 	{
 		for (p = argv[argc]; *p; p++)
-		{
 			if (*p < '0' || *p > '9')
-			{
-				printf("Error\n");
-				return (1);
-			}
-		}
+				return (printf("Error\n", 1);
 		add += atoi(argv[argc]);
 	}
 	printf("%d\n", add);
