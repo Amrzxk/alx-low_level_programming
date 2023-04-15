@@ -21,7 +21,7 @@ int main(int argc, char **argv)
 	{
 		for (p = argv[argc]; *p; p++)
 			if (*p < '0' || *p > '9')
-				return (printf("Error\n", 1);
+				return (printf("Error\n"), 1);
 		add += atoi(argv[argc]);
 	}
 	printf("%d\n", add);
