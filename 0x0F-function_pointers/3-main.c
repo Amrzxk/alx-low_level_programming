@@ -27,12 +27,13 @@ int main(int __attribute__((__unused__)) argc, char **argv)
 	op = argv[2];
 	y = atoi(argv[3]);
 
-	if ((*op == '/' && num2 == 0) || (*op == '%' && num2 == 0))
+	if (get_op_func(op) == NULL || op[1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
 	}
-	if (get_op_func(op) == NULL || op[1] != '\0')
+
+	if ((*op == '/' && y == 0) || (*op == '%' && y == 0))
 	{
 		printf("Error\n");
 		exit(100);
